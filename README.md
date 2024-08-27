@@ -6,7 +6,7 @@ This project aims to develop and optimize a reinforcement learning-based reward 
 
 ## Project Files
 
-### 1. `reward_function_v1.py`
+### 1. `modelCenterLine.py`
 **General Aim:**  
 This script implements a basic reward function that encourages the agent to stay on track by rewarding it for staying close to the center line and penalizing it for moving too slowly. The function also adds a minor bonus for maintaining a low steering angle, which helps in reducing excessive steering.
 
@@ -15,7 +15,7 @@ This script implements a basic reward function that encourages the agent to stay
 - Penalizes low speed.
 - Encourages minimal steering angle.
 
-### 2. `reward_function_v2.py`
+### 2. `modelPreventZigZag.py`
 **General Aim:**  
 This version of the reward function is designed to prevent zig-zag behavior by penalizing excessive steering. It also incorporates a system of markers that provide different reward levels based on the agent's distance from the center line. This function additionally penalizes the agent for going off track.
 
@@ -24,7 +24,7 @@ This version of the reward function is designed to prevent zig-zag behavior by p
 - Provides rewards based on the distance from the center line.
 - Penalizes the agent if it goes off track.
 
-### 3. `reward_function_v3.py`
+### 3. `modelWithinTrack.py`
 **General Aim:**  
 This function builds on the previous versions by rewarding the agent for maintaining all wheels on the track and staying between the track borders. It also introduces a reward that scales with the square of the agent's speed, promoting faster and more efficient driving.
 
@@ -40,7 +40,7 @@ The overarching goal of this project is to create a highly effective and adaptab
 ## How to Use
 
 1. Clone the repository.
-2. Select one of the reward functions (e.g., `reward_function_v1.py`, `reward_function_v2.py`, `reward_function_v3.py`).
+2. Select one of the reward functions (e.g., `modelCenterLine.py`, `modelPreventZigZag.py`, `modelWithinTrack.py`).
 3. Integrate the selected reward function into your reinforcement learning training environment.
 4. Train your autonomous racing agent using the chosen reward function.
 5. Evaluate and compare the performance of the agent under different reward functions to determine the most effective one.
